@@ -1,28 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <title> Test-1 </title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap')
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
-            margin: 0px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            color: var(--tg-theme-text-color);
+            background: var(--tg-theme-bg-color);
+        }
+        #main {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 50px;
+            margin-bottom: 10px;
         }
         img {
-            display: flex;
+            width: 70px;
+            margin: 30px auto;
+        }
+        p {
+            width: 350px;
+            margin: 0 auto;
+        }
+        button {
+            border: 0;
+            border-radius: 5px;
+            margin-top: 50px;
+            height: 60px;
+            width: 200px;
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: var(--tg-theme-button-color);
+            background: var(--tg-theme-button-text-color);
+        }
+        button:hover {
+            background: var(--tg-theme-secondary-bg-color);
         }
     </style>
 </head>
 <body>
-    <div id="into"></div>
+    <div id="main">
+        <h1> Пробный сайт </h1>
+        <img src="https://e7.pngegg.com/pngimages/307/693/png-clipart-ribbon-of-saint-george-2014-pro-russian-unrest-in-ukraine-2014-pro-russian-unrest-in-ukraine-donbass-9-ribbon-orange.png">
+        <p> Какой-то текст к картинке</p>
+        <button id="buy"> Купить </button>
+    </div>
+    
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script>
-        let into, s = "";
-        into = document.getElementById("into");
-        
-        for (let i = 0; i <= 20; ++i) {
-            url = `"${i}.png"`;
-            s += `<img src=${url} width="100%" onerror="this.style.display = 'none'">`;
-        }
-        into.innerHTML = s;
-    </script>
 </body>
 </html>
